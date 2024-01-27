@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.product-card{
+  padding: 10px;
+  width: 23%;
+  margin: 10px;
+}
+.product-title{
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;
+   margin: 10px 0;
+}
+
+.product-img img{
+  aspect-ratio: 2/2;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.info-container{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.price{
+  font-weight: 600;
+  color: rgb(0, 118, 191);
+}
+.rating{
+  font-weight: 600;
+  color: rgb(0, 118, 191);
+}
+.description{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+.search-bar{
+  border: 1px solid gainsboro;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.cart-items{
+  background: #87a1eb;
+  color: #fff;
+  border-radius: 40px;
+  padding: 1px 6px;
+  font-size: 12px;
+}
+.product-show{
+  width: 50%;
+}
+@media only screen and (max-width: 767px){
+  .product-card{
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+  }
+}

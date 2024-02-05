@@ -42,7 +42,7 @@ const Home = () => {
           onChange={handleSearch}
         />
       </div>
-      <div className="flex flex-wrap">
+      <div className="grid md:grid-cols-4 ">
         {filtredProduct.length == 0
           ? "Sorry No Product found"
           : filtredProduct.map((item, index) => {

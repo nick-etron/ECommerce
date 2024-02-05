@@ -5,6 +5,8 @@ import Product from "./components/Product";
 import { Provider } from "react-redux";
 import Header from "./components/Header";
 import store from "./utils/store";
+import Register from "./components/Register";
+import Login from "./components/login";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/product/:proId" element={<Product />} />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
         </Routes>
       </Router>
     </Provider>

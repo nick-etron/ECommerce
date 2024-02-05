@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <nav className="bg-blue-300 text-white flex justify-between shadow-lg h-16 items-center">
       <div className="logo p-2">
-        <h2>Logo</h2>
+        <img src="public/logo192.png" />
       </div>
       <div className="right-nav flex justify-between items-center">
         <ul className={isActive ? "flex navlist active" : "flex navlist"}>

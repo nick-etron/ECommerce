@@ -54,24 +54,6 @@ code {
   font-size: 20px;
   margin-bottom: 10px;
 }
-<<<<<<< HEAD
-.price{
-  font-weight: 600;
-  color: rgb(0, 118, 191);
-}
-.rating{
-  font-weight: 600;
-  color: rgb(0, 118, 191);
-}
-.description{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* number of lines to show */
-          line-clamp: 3; 
-  -webkit-box-orient: vertical;
-}
-.search-bar{
-=======
 .price {
   font-weight: 600;
   color: rgb(0, 118, 191);
@@ -88,30 +70,18 @@ code {
   -webkit-box-orient: vertical;
 }
 .search-bar {
->>>>>>> 6a80b0a126226c1d2bb7e6278fa7a40cf7d802e6
   border: 1px solid gainsboro;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
 }
-<<<<<<< HEAD
-.cart-items{
-=======
 .cart-items {
->>>>>>> 6a80b0a126226c1d2bb7e6278fa7a40cf7d802e6
   background: #87a1eb;
   color: #fff;
   border-radius: 40px;
   padding: 1px 6px;
   font-size: 12px;
 }
-<<<<<<< HEAD
-.product-show{
-  width: 50%;
-}
-@media only screen and (max-width: 767px){
-  .product-card{
-=======
 .product-show {
   width: 50%;
 }
@@ -132,18 +102,14 @@ code {
   }
 
   .product-card {
->>>>>>> 6a80b0a126226c1d2bb7e6278fa7a40cf7d802e6
     padding: 10px;
     width: 100%;
     margin: 10px;
   }
-<<<<<<< HEAD
-=======
   .hamburger {
     display: block;
   }
   .navlist.active {
     right: 0;
   }
->>>>>>> 6a80b0a126226c1d2bb7e6278fa7a40cf7d802e6
 }

@@ -9,9 +9,9 @@ const Header = () => {
     !isActive ? setIsActive(true) : setIsActive(false);
   }
   return (
-    <nav className="bg-blue-300 text-white flex justify-between shadow-lg h-16 items-center">
+    <nav className="nav-bar bg-blue-300 text-white flex justify-between shadow-lg h-16 items-center">
       <div className="logo p-2">
-        <img src="public/logo192.png" />
+        <img src="src/logo/logo192.png" alt="Fake Store" />
       </div>
       <div className="right-nav flex justify-between items-center">
         <ul className={isActive ? "flex navlist active" : "flex navlist"}>
@@ -22,36 +22,29 @@ const Header = () => {
               Home{" "}
             </Link>
           </li>
+
           <li className="p-2">
-            <i className="fa fa-shopping-bag px-1" aria-hidden="true"></i>
-            <Link to={"/product"} className="nav-link">
-              Product
-            </Link>
-          </li>
-          <li className="p-2">
-            <i className="fa fa-shopping-cart px-1" aria-hidden="true"></i>
-            <Link to={"/cart"} className="nav-link">
-              Cart <span className="cart-items">{cartItems.length}</span>
-            </Link>
-            {console.log(cartItems)}
-          </li>
-          <li className="p-2">
-            <i className="fa fa-shopping-bag px-1" aria-hidden="true"></i>
+            <i className="fa fa-user-circle-o px-1" aria-hidden="true"></i>
             <Link to={"/login"} className="nav-link">
               Login
             </Link>
           </li>
           <li className="p-2">
-            <i className="fa fa-shopping-bag px-1" aria-hidden="true"></i>
+            <i className="fa fa-sign-in px-1" aria-hidden="true"></i>
             <Link to={"/register"} className="nav-link">
               Register
             </Link>
           </li>
         </ul>
-
+        <div className="p-2">
+          <Link to={"/cart"} className="nav-link">
+            <i className="fa fa-shopping-cart px-1" aria-hidden="true"></i>
+            <span className="cart-items">{cartItems.length}</span>
+          </Link>
+        </div>
         <div className="hamburger p-2" onClick={handleClick}>
           {isActive ? (
-            <i class="fa fa-times" aria-hidden="true"></i>
+            <i className="fa fa-times" aria-hidden="true"></i>
           ) : (
             <i className="fa fa-bars" aria-hidden="true"></i>
           )}

@@ -88,23 +88,66 @@ code {
 .hamburger {
   display: none;
 }
+.nav-bar{
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.page-margin{
+  margin-top: 65px;
+}
+.btn{
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid;
+}
 
+.btn-success{
+  background-color: #00DF86;
+  color: #fff;
+  border-color: #00DF86;
+}
+.btn-success:hover, .btn-success:focus{
+  background-color: transparent;
+  color: #00DF86;
+}
+.btn-primary{
+  background-color: #83C6FA;
+  color: #fff;
+  border-color: #83C6FA;
+}
+.btn-primary:hover, .btn-primary:focus{
+  background-color: transparent;
+  color: #83C6FA;
+}
+.btn-danger{
+  background-color: #FF3A47;
+  color: #fff;
+  border-color: #FF3A47;
+}
+.btn-danger:hover, .btn-danger:focus{
+  background-color: transparent;
+  color: #FF3A47;
+}
 @media only screen and (max-width: 767px) {
   .navlist {
     display: block;
     position: fixed;
-    top: 65px;
+    top: 64px;
     right: -200px;
     background: rgb(147 197 253);
     width: 200px;
     text-align: center;
     transition: 0.3s ease-in-out;
+    height: 100%;
   }
 
   .product-card {
     padding: 10px;
     width: 100%;
-    margin: 10px;
+    margin: 0px;
   }
   .hamburger {
     display: block;

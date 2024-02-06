@@ -12,10 +12,10 @@ const Cart = () => {
     setTotal(calculateTotal);
   }, [cartItems]);
   return (
-    <>
+    <div className="page-margin">
       {cartItems.length > 0 ? (
         <div className="grid md:grid-cols-2">
-          <div className="grid md:grid-cols-3">
+          <div className="grid md:grid-cols-2">
             {cartItems.map((item, index) => (
               <CartCard {...item} key={index} index={index} />
             ))}
@@ -28,12 +28,12 @@ const Cart = () => {
             {cartItems.map((item) => (
               <div className="flex justify-between px-3 py-2 ">
                 <p>{item.title}</p>
-                <p>{item.price}</p>
+                <p>{item.price} $</p>
               </div>
             ))}
             <div className="flex justify-between p-3 bg-blue-300 text-white font-bold">
               <p>Total :</p>
-              <p>{total}</p>
+              <p>{total} $</p>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Cart = () => {
           <p className="font-bold p-3 ">No Products in the cart</p>
         </div>
       )}
-    </>
+    </div>
   );
 };
 export default Cart;

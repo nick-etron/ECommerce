@@ -89,9 +89,7 @@ const Register = () => {
             <p className="text-red-500">{err.ConfirmPassword}</p>
           )}
         </div>
-        <button className="bg-blue-400 p-2 text-white rounded-md">
-          Submit
-        </button>
+        <button className="btn btn-primary">Submit</button>
       </form>
     </div>
   );

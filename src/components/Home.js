@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import CarouselBanner from "./CarouselBanner";
 import { useEffect, useState } from "react";
 const Home = () => {
   const [product, setProduct] = useState([]);
@@ -26,28 +27,31 @@ const Home = () => {
   }
 
   return (
-    <div className="p-3">
-      <div className="grid grid-cols-2">
-        <div>
-          <h1>Way To Fly High</h1>
+    <div className="page-margin">
+      <CarouselBanner />
+      <div className="p-3">
+        <div className="grid grid-cols-2">
+          <div>
+            <h1>Way To Fly High</h1>
+          </div>
+          <div></div>
         </div>
-        <div></div>
-      </div>
-      <div className="search-container">
-        <input
-          className="search-bar"
-          type="text"
-          placeholder="Search"
-          value={searchText}
-          onChange={handleSearch}
-        />
-      </div>
-      <div className="grid md:grid-cols-4 ">
-        {filtredProduct.length == 0
-          ? "Sorry No Product found"
-          : filtredProduct.map((item, index) => {
-              return <ProductCard {...item} key={index} index={index} />;
-            })}
+        <div className="search-container">
+          <input
+            className="search-bar"
+            type="text"
+            placeholder="Search"
+            value={searchText}
+            onChange={handleSearch}
+          />
+        </div>
+        <div className="grid md:grid-cols-4 ">
+          {filtredProduct.length == 0
+            ? "Sorry No Product found"
+            : filtredProduct.map((item, index) => {
+                return <ProductCard {...item} key={index} index={index} />;
+              })}
+        </div>
       </div>
     </div>
   );

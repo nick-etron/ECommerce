@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import logo from "../logo/logo.png";
 const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
   const [isActive, setIsActive] = useState(false);
@@ -9,30 +10,27 @@ const Header = () => {
     !isActive ? setIsActive(true) : setIsActive(false);
   }
   return (
-    <nav className="nav-bar bg-blue-300 text-white flex justify-between shadow-lg h-16 items-center">
+    <nav className="nav-bar flex justify-between shadow-xl h-16 items-center">
       <div className="logo p-2">
-        <img src="src/logo/logo192.png" alt="Fake Store" />
+        <img src={logo} alt="Fake Store" />
       </div>
       <div className="right-nav flex justify-between items-center">
         <ul className={isActive ? "flex navlist active" : "flex navlist"}>
           <li className="p-2">
-            <i className="fa fa-home px-1" aria-hidden="true"></i>
             <Link to={"/"} className="nav-link">
-              {" "}
-              Home{" "}
+              <i className="fa fa-home px-1" aria-hidden="true"></i> Home
             </Link>
           </li>
 
           <li className="p-2">
-            <i className="fa fa-user-circle-o px-1" aria-hidden="true"></i>
             <Link to={"/login"} className="nav-link">
+              <i className="fa fa-user-circle-o px-1" aria-hidden="true"></i>{" "}
               Login
             </Link>
           </li>
           <li className="p-2">
-            <i className="fa fa-sign-in px-1" aria-hidden="true"></i>
             <Link to={"/register"} className="nav-link">
-              Register
+              <i className="fa fa-sign-in px-1" aria-hidden="true"></i> Register
             </Link>
           </li>
         </ul>

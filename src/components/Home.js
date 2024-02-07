@@ -30,12 +30,6 @@ const Home = () => {
     <div className="page-margin">
       <CarouselBanner />
       <div className="p-3">
-        <div className="grid grid-cols-2">
-          <div>
-            <h1>Way To Fly High</h1>
-          </div>
-          <div></div>
-        </div>
         <div className="search-container">
           <input
             className="search-bar"

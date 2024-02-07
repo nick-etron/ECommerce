@@ -27,6 +27,7 @@ code {
   line-clamp: 1;
   -webkit-box-orient: vertical;
   margin: 10px 0;
+  color: rgb(0, 118, 191);
 }
 .form-group {
   display: flex;
@@ -46,9 +47,12 @@ a:hover{
   text-decoration: none;
 }
 .Page-title{
-  font-size: 30px;
+  font-size: 30px ;
   font-weight: bold;
-  padding: 20px 0;
+  padding: 20px 10px;
+}
+.fade{
+  transition: .3 ease-in-out;
 }
 .navlist a:hover, .navlist i:hover {
   color: #95c8ff;

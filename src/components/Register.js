@@ -21,6 +21,11 @@ const Register = () => {
         ...prevData,
         [name]: name + " Can't be Empty",
       }));
+    } else if (name === "Password" && value.length < 8) {
+      setErr((prevData) => ({
+        ...prevData,
+        [name]: "Password Must be 8 characters long",
+      }));
     } else if (name === "ConfirmPassword" && value !== FormData.Password) {
       setErr((prevData) => ({
         ...prevData,
@@ -41,12 +46,15 @@ const Register = () => {
     }));
     validate(name, value);
   }
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
 
   return (
     <div className="page-margin">
       <div className="w-96 m-auto md:mt-20 shadow-xl rounded-md">
         <h1 className="Page-title">Register Now</h1>
-        <form className="p-3 ">
+        <form className="p-3 " onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name</label>
             <input

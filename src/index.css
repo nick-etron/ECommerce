@@ -27,6 +27,7 @@ code {
   line-clamp: 1;
   -webkit-box-orient: vertical;
   margin: 10px 0;
+  color: rgb(0, 118, 191);
 }
 .form-group {
   display: flex;
@@ -41,6 +42,21 @@ code {
 }
 .navlist a {
   font-weight: 500;
+}
+a:hover{
+  text-decoration: none;
+}
+.Page-title{
+  font-size: 30px ;
+  font-weight: bold;
+  padding: 20px 10px;
+}
+.fade{
+  transition: .3 ease-in-out;
+}
+.navlist a:hover, .navlist i:hover {
+  color: #95c8ff;
+  text-decoration: none;
 }
 .product-img img {
   aspect-ratio: 2/2;
@@ -71,7 +87,7 @@ code {
 }
 .search-bar {
   border: 1px solid gainsboro;
-  padding: 10px;
+  padding: 5px 8px;
   margin: 10px 0;
   border-radius: 5px;
 }
@@ -92,9 +108,12 @@ code {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 100;
+  background: #001f4e;
+  color: #fff;
 }
 .page-margin{
-  margin-top: 65px;
+  margin-top: 64px;
 }
 .btn{
   padding: 0.5rem;

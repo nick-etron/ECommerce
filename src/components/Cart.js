@@ -27,8 +27,8 @@ const Cart = () => {
             </div>
             {cartItems.map((item) => (
               <div className="flex justify-between px-3 py-2 ">
-                <p>{item.title}</p>
-                <p>{item.price} $</p>
+                <p className="font-bold">{item.title}</p>
+                <p className="font-bold">{item.price} $</p>
               </div>
             ))}
             <div className="flex justify-between p-3 bg-blue-300 text-white font-bold">

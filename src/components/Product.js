@@ -8,10 +8,12 @@ const Product = () => {
   const { proId } = params;
 
   const [product, setProduct] = useState({});
+  const [addAlert, setAddAlert] = useState(false);
 
   const dispatch = useDispatch();
   function handleAddItem() {
     dispatch(addItem(product));
+    setAddAlert(true);
   }
 
   async function getProduct() {
@@ -54,6 +56,13 @@ const Product = () => {
               Add to Cart
             </button>
           </div>
+          {addAlert ? (
+            <p className="text-green-400 font-bold float-end mt-2">
+              Item Added <i class="fa fa-check-circle" aria-hidden="true"></i>
+            </p>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>
